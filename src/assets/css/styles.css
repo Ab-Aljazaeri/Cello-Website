@@ -233,11 +233,13 @@ a:hover { color: var(--ink); }
 .daypart-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 @media (max-width: 860px) { .daypart-grid { grid-template-columns: minmax(0, 1fr); } }
 .daypart {
-  position: relative; display: grid; gap: 10px; align-content: start; padding: 28px 26px 26px; min-width: 0;
+  position: relative; display: grid; gap: 10px; align-content: start; padding: 28px 26px 26px; min-width: 0; overflow: hidden;
   border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); text-decoration: none; color: var(--ink);
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 .daypart:hover { border-color: var(--copper); transform: translateY(-2px); color: var(--ink); }
+.daypart-photo { width: calc(100% + 52px); max-width: none; margin: -28px -26px 8px; aspect-ratio: 16 / 10; object-fit: cover; transition: transform 0.4s ease; }
+.daypart:hover .daypart-photo { transform: scale(1.03); }
 .daypart h3 { font-size: var(--step-2); font-weight: 800; }
 .daypart p { color: var(--ink-2); }
 .daypart .from { font-weight: 700; color: var(--copper-ink); }
@@ -284,7 +286,8 @@ a:hover { color: var(--ink); }
 /* catering */
 .catering { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-radius: 28px; overflow: hidden; background: var(--ink); color: var(--on-dark); }
 @media (max-width: 860px) { .catering { grid-template-columns: minmax(0, 1fr); } }
-.catering-art { min-height: 300px; background: var(--pattern), radial-gradient(120% 120% at 70% 20%, #F7C878, #D68B45 55%, #8C4A1F); display: grid; place-items: center; }
+.catering-art { position: relative; min-height: 300px; background: var(--pattern), radial-gradient(120% 120% at 70% 20%, #F7C878, #D68B45 55%, #8C4A1F); display: grid; place-items: center; }
+.catering-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .catering-art span { font-family: var(--font-display); font-style: italic; font-weight: 700; font-size: 1.6rem; color: rgba(46, 27, 16, 0.75); }
 .catering-copy { display: grid; gap: 18px; align-content: center; padding: clamp(28px, 5vw, 56px); }
 .catering-copy h2 { color: var(--on-dark); font-size: var(--step-3); font-weight: 800; }
@@ -383,12 +386,16 @@ a:hover { color: var(--ink); }
 .menu-item { display: grid; gap: 6px; min-width: 0; align-content: start; }
 .menu-item:target { animation: flash 1.6s ease-out 1; border-radius: 12px; }
 @keyframes flash { 0% { background: color-mix(in srgb, var(--gold) 45%, transparent); box-shadow: 0 0 0 10px color-mix(in srgb, var(--gold) 45%, transparent); } 100% { background: transparent; box-shadow: 0 0 0 10px transparent; } }
-.mi-photo { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 14px; margin-bottom: 8px; }
+.menu-item.has-photo { grid-template-columns: 148px minmax(0, 1fr); gap: 0 18px; align-items: start; }
+.mi-body { display: grid; gap: 6px; min-width: 0; align-content: start; }
+.mi-photo { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; box-shadow: 0 6px 16px -10px rgba(46, 27, 16, 0.5); }
+@media (max-width: 760px) { .menu-item.has-photo { grid-template-columns: 112px minmax(0, 1fr); gap: 0 14px; } }
 .mi-head { display: flex; align-items: baseline; gap: 10px; }
 .mi-head h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; flex: 0 1 auto; min-width: 0; }
 .mi-leader { flex: 1 1 24px; min-width: 24px; border-bottom: 2px dotted color-mix(in srgb, var(--copper) 55%, transparent); transform: translateY(-5px); }
 .mi-head .price { font-size: 1.15rem; }
-.mi-head .price.muted { color: var(--ink-2); font-weight: 600; font-size: 0.95rem; font-style: italic; }
+.mi-head .price.muted { color: var(--ink-2); font-weight: 600; font-size: 0.95rem; font-style: italic; white-space: normal; text-align: right; flex: 0 1 auto; max-width: 9em; line-height: 1.25; }
+.has-photo .mi-leader { min-width: 12px; }
 .mi-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
 .mi-meta .portion { color: var(--ink-2); font-weight: 600; font-size: 0.875rem; }
 .mi-desc { color: var(--ink-2); line-height: 1.55; }

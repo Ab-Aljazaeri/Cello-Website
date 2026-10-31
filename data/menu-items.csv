@@ -1,40 +1,40 @@
 id,category,name,description,price,price_label,portion,vegetarian,menu_star,featured,photo,status,sort,source,notes
 classic-bagel,breakfast,Classic Bagel,Cream cheese.,4.00,,,yes,,,,active,1,breakfast-2024,Vegetarian inferred: breakfast menu has no leaf marks
-cello-bagel,breakfast,Cello Bagel,Falafel and hummus with tahini sauce.,7.50,,,yes,,yes,,active,2,breakfast-2024,Vegetarian inferred: breakfast menu has no leaf marks
+cello-bagel,breakfast,Cello Bagel,Falafel and hummus with tahini sauce.,7.50,,,yes,,2,cello-bagel,active,2,breakfast-2024,Vegetarian inferred: breakfast menu has no leaf marks
 egg-cheese-bagel,breakfast,Egg & Cheese,Scrambled egg and American cheese.,6.00,,,yes,,,,active,3,breakfast-2024,Vegetarian inferred: breakfast menu has no leaf marks
 veggie-shawarma-egg-bagel,breakfast,Veggie Shawarma & Egg,"Marinated mixed veggies (mushrooms, squash, onion, zucchini), scrambled egg and American cheese.",8.00,,,yes,,,,active,4,breakfast-2024,Vegetarian inferred: breakfast menu has no leaf marks
-gyro-club-bagel,breakfast,Gyro Club,"Lamb gyro bacon, scrambled eggs and American cheese.",8.00,,,,,,,active,5,breakfast-2024,"Question: what is 'gyro bacon' (beef, turkey or lamb)? Worth naming since the kitchen is halal"
-mediterranean-bagel,breakfast,Mediterranean,"Avocado, tomato, cucumber, mixed greens and roasted eggplant spread.",7.50,,,yes,,,,active,6,breakfast-2024,Fixed typo: Avacado. Vegetarian inferred
+gyro-club-bagel,breakfast,Gyro Club,"Lamb gyro bacon, scrambled eggs and American cheese.",8.00,,,,,,gyro-club-bagel,active,5,breakfast-2024,"Question: what is 'gyro bacon' (beef, turkey or lamb)? Worth naming since the kitchen is halal"
+mediterranean-bagel,breakfast,Mediterranean,"Avocado, tomato, cucumber, mixed greens and roasted eggplant spread.",7.50,,,yes,,,mediterranean-bagel,active,6,breakfast-2024,Fixed typo: Avacado. Vegetarian inferred
 sunshine-burrito,breakfast,Sunshine Burrito,"Avocado, eggs and feta cheese.",9.45,,,yes,,,,active,7,breakfast-2024,Fixed typo: Avacado. Vegetarian inferred
 rooster-burrito,breakfast,Rooster Burrito,"Falafel, tahini, eggs and fresh greens.",9.45,,,yes,,,,active,8,breakfast-2024,Vegetarian inferred
-waffle,breakfast,Waffle,Served with maple syrup.,9.95,,,yes,,,,active,9,breakfast-2024,Vegetarian inferred
-hummus-pita,appetizers,Hummus & Pita,"Our homemade hummus with tahini and lemon juice, drizzled with olive oil and served with warm pita.",7.50,,,yes,yes,yes,,active,1,front-2024,Flavor upgrades are in modifiers.csv
+waffle,breakfast,Waffle,Served with maple syrup.,9.95,,,yes,,,waffle,active,9,breakfast-2024,Vegetarian inferred. Photo shows a berry-topped waffle; confirm toppings
+hummus-pita,appetizers,Hummus & Pita,"Our homemade hummus with tahini and lemon juice, drizzled with olive oil and served with warm pita.",7.50,,,yes,yes,,,active,1,front-2024,Flavor upgrades are in modifiers.csv
 hummus-chicken-shawarma,appetizers,Hummus with Chicken Shawarma,"Homemade hummus topped with our chicken shawarma and olive oil, served with warm pita.",10.00,,,,,,,active,2,front-2024,
 hummus-lamb-gyro,appetizers,Hummus with Lamb Gyro,"Homemade hummus with tahini and lemon juice, drizzled with olive oil, topped with lamb gyro and served with warm pita.",11.00,,,,,,,active,3,front-2024,
 hummus-beiruti,appetizers,Hummus Beiruti,"Homemade creamy chickpeas with cucumber, tomato, garlic and lemon juice, finished with tahini and olive oil and served with warm pita.",9.00,,,yes,,,,active,4,front-2024,Printed as 'Beoruiti'
-falafel-bites,appetizers,Falafel Bites,"Ground chickpeas with special spices, onion, parsley and garlic, served with tahini sauce.",7.50,,8 pieces,yes,,,,active,5,front-2024,
-grape-leaves,appetizers,Grape Leaves,"Stuffed with rice and spices, slow cooked and topped with olive oil and lemon juice.",8.00,,8 pieces,yes,,,,active,6,front-2024,
-spanakopita,appetizers,Spanakopita,"Phyllo dough stuffed with spinach, feta cheese and cream cheese.",7.50,,4 pieces,yes,,,,active,7,front-2024,
+falafel-bites,appetizers,Falafel Bites,"Ground chickpeas with special spices, onion, parsley and garlic, served with tahini sauce.",7.50,,8 pieces,yes,,,falafel-bites,active,5,front-2024,
+grape-leaves,appetizers,Grape Leaves,"Stuffed with rice and spices, slow cooked and topped with olive oil and lemon juice.",8.00,,8 pieces,yes,,,grape-leaves,active,6,front-2024,
+spanakopita,appetizers,Spanakopita,"Phyllo dough stuffed with spinach, feta cheese and cream cheese.",7.50,,4 pieces,yes,,,spanakopita,active,7,front-2024,
 lebneh-zaatar,appetizers,Lebneh & Zaatar,"Creamy Lebanese yogurt topped with Mediterranean herbs and olive oil, served with pita.",8.00,,,yes,,,,active,8,front-2024,
 ful-medames,appetizers,Ful Medames,"Creamy fava beans with onions, lemon juice and olive oil, served with pita bread.",8.00,,,yes,,,,active,9,front-2024,
 baba-ganoush,appetizers,Baba Ganoush,"Smoky roasted eggplant mixed with tahini, garlic, spices and lemon juice, served with pita bread.",8.00,,,yes,,,,active,10,front-2024,
-sampler-1,samplers,Sampler No. 1,"Hummus, baba ganoush, falafel bites, tabbouleh and tzatziki sauce, served with pita.",14.00,,,yes,,,,active,1,front-2024,
-sampler-2,samplers,Sampler No. 2,"Hummus with chicken shawarma, grape leaves, spanakopita, falafel and tzatziki sauce, served with pita.",16.00,,,,,yes,,active,2,front-2024,
+sampler-1,samplers,Sampler No. 1,"Hummus, baba ganoush, falafel bites, tabbouleh and tzatziki sauce, served with pita.",14.00,,,yes,,,sampler-1,active,1,front-2024,
+sampler-2,samplers,Sampler No. 2,"Hummus with chicken shawarma, grape leaves, spanakopita, falafel and tzatziki sauce, served with pita.",16.00,,,,,4,sampler-2,active,2,front-2024,
 sampler-3,samplers,Sampler No. 3,Your choice of two different hummus blends and baba ganoush.,13.00,,,yes,,,,active,3,front-2024,Hummus choices are in modifiers.csv
-lentil-soup,soup-salad,Lentil Soup,"Lentils simmered with onions, lemon juice and spices.",5.00,,,yes,,,,active,1,front-2024,
-falafel-salad,soup-salad,Falafel Salad,"Spring mix, lettuce, tomatoes and cucumbers with lemon juice and olive oil, topped with falafel bites.",10.00,,,yes,,,,active,2,front-2024,
-tabbouleh-salad,soup-salad,Tabbouleh Salad,"A traditional blend of fresh chopped parsley, tomatoes, mint, bulgur cracked wheat, lemon juice and olive oil.",9.00,,,yes,,,,active,3,front-2024,Printed as 'burger cracker wheat'
-fattoush-salad,soup-salad,Fattoush Salad,"Toasted pita salad with chopped tomatoes, onions, cucumbers and mint, lemon juice and fried pita bread.",10.00,,,yes,,,,active,4,front-2024,
+lentil-soup,soup-salad,Lentil Soup,"Lentils simmered with onions, lemon juice and spices.",5.00,,,yes,,,lentil-soup,active,1,front-2024,
+falafel-salad,soup-salad,Falafel Salad,"Spring mix, lettuce, tomatoes and cucumbers with lemon juice and olive oil, topped with falafel bites.",10.00,,,yes,,5,falafel-salad,active,2,front-2024,
+tabbouleh-salad,soup-salad,Tabbouleh Salad,"A traditional blend of fresh chopped parsley, tomatoes, mint, bulgur cracked wheat, lemon juice and olive oil.",9.00,,,yes,,,tabbouleh-salad,active,3,front-2024,Printed as 'burger cracker wheat'
+fattoush-salad,soup-salad,Fattoush Salad,"Toasted pita salad with chopped tomatoes, onions, cucumbers and mint, lemon juice and fried pita bread.",10.00,,,yes,,,fattoush-salad,active,4,front-2024,
 greek-salad,soup-salad,Greek Salad,"Lettuce, mixed greens, tomatoes, cucumbers, onions, Kalamata olives, feta cheese and olive oil, with roasted red pepper.",10.00,,,yes,,,,active,5,front-2024,
-house-salad,soup-salad,House Salad,"Diced tomatoes, lettuce and cucumbers with olive oil and lemon juice.",5.00,,,yes,,,,active,6,front-2024,
+house-salad,soup-salad,House Salad,"Diced tomatoes, lettuce and cucumbers with olive oil and lemon juice.",5.00,,,yes,,,house-salad,active,6,front-2024,
 falafel-sandwich,sandwiches,Falafel,"Hummus, lettuce, tomatoes, cucumbers and tahini sauce, topped with falafel.",8.50,,,yes,,,,active,1,back-2024,Eggplant or cauliflower add-on is in modifiers.csv
 chicken-shawarma-sandwich,sandwiches,Chicken Shawarma,"Marinated chicken with Middle Eastern spices, topped with tahini, lettuce, tomatoes, cucumbers and garlic sauce.",9.00,,,,,,,active,2,back-2024,
-shawarma-ammaniah,sandwiches,Shawarma Ammaniah,"Marinated chicken with garlic sauce on a crispy grilled wrap, sliced into bites with Middle Eastern spices.",10.00,,,,yes,yes,,active,3,back-2024,Old Wix site spells it 'Ammania'; confirm one spelling
+shawarma-ammaniah,sandwiches,Shawarma Ammaniah,"Marinated chicken with garlic sauce on a crispy grilled wrap, sliced into bites with Middle Eastern spices.",10.00,,,,yes,1,shawarma-ammaniah,active,3,back-2024,Old Wix site spells it 'Ammania'; confirm one spelling
 vegetarian-shawarma,sandwiches,Vegetarian Shawarma,"Fresh mushrooms, veggie mix and red peppers sautéed with hummus spread.",8.00,,,yes,,,,active,4,back-2024,
 gyro-sandwich,sandwiches,Gyro,"Sliced lamb marinated in Greek spices, with tomatoes, cucumbers, onions, lettuce and tzatziki sauce.",9.50,,,,,,,active,5,back-2024,
 burrito,sandwiches,Burrito,"Cello rice, lettuce mix, tomatoes, cucumbers, garlic, tahini and Cello sauce, with your choice of chicken, gyro, falafel or veggie.",9.45,$9.45 – $10.45,,option,yes,,,active,6,back-2024,"Printed as 'celo sauce'. Price depends on filling, see modifiers.csv"
-chicken-shawarma-platter,entrees,Chicken Shawarma Platter,"Marinated chicken in Middle Eastern spices, served with rice, sautéed vegetables, tzatziki, garlic and tahini sauce and warm bread.",15.00,,,,,yes,,active,1,back-2024,
-gyro-platter,entrees,Gyro Platter,"Sliced gyro marinated in Middle Eastern spices, served with rice, sautéed vegetables, tzatziki, garlic sauce and warm bread.",16.50,,,,,,,active,2,back-2024,
+chicken-shawarma-platter,entrees,Chicken Shawarma Platter,"Marinated chicken in Middle Eastern spices, served with rice, sautéed vegetables, tzatziki, garlic and tahini sauce and warm bread.",15.00,,,,,,,active,1,back-2024,
+gyro-platter,entrees,Gyro Platter,"Sliced gyro marinated in Middle Eastern spices, served with rice, sautéed vegetables, tzatziki, garlic sauce and warm bread.",16.50,,,,,3,gyro-platter,active,2,back-2024,
 veggie-shawarma-platter,entrees,Veggie Shawarma Platter,"Fresh mushrooms sautéed with zucchini, squash, caramelized onions and peppers, with red pepper sauce, rice, tzatziki, garlic sauce and warm bread.",13.50,,,yes,,,,active,3,back-2024,Printed as 'Vegie'
 side-chicken-shawarma,sides,Chicken Shawarma,,5.00,,,,,,,active,1,back-2024,Printed as 'Sawarma'
 side-lamb-gyro,sides,Lamb Gyro,,6.00,,,,,,,active,2,back-2024,
@@ -50,5 +50,5 @@ baklava,desserts,Baklava,Nineteen house varieties. Ask what's in the case today.
 namoura,desserts,Namoura,,,See the case,,,,,,active,2,back-2024,No price or description on printed menu
 mamoul,desserts,Mamoul,,,See the case,,,,,,active,3,back-2024,No price or description on printed menu
 brownies,desserts,Brownies,,,See the case,,,,,,active,4,back-2024,No price on printed menu
-dubai-strawberry-cup,desserts,Dubai Chocolate Strawberry Cup,"Fresh strawberries layered with chocolate and pistachio cream, topped with toasted kunafa and crushed pistachios.",,Ask at the counter,,,,1,dubai-strawberry-cup,active,5,drive-photos-2025,"Not on the 2024 printed menu. Name, price and description written from the photos; confirm with family"
+dubai-strawberry-cup,desserts,Dubai Chocolate Strawberry Cup,"Fresh strawberries layered with chocolate and pistachio cream, topped with toasted kunafa and crushed pistachios.",,Ask at the counter,,,,6,dubai-strawberry-cup,active,5,drive-photos-2025,"Not on the 2024 printed menu. Name, price and description written from the photos; confirm with family"
 dubai-chocolate-bar,desserts,Dubai Chocolate Bar,A thick chocolate bar filled with pistachio cream and crunchy toasted kunafa.,,Ask at the counter,,,,,dubai-chocolate-bar,active,6,drive-photos-2024,Not on the 2024 printed menu. Price and description written from the photos; confirm with family

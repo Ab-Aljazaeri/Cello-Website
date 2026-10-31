@@ -29,7 +29,7 @@ docs/                 Original printed menus, logo files, open questions
 ## Adding a photo
 
 1. Download the original from Google Drive into `photos-originals/`.
-2. Add a row to `data/photos.csv`: a short `slug` (like `hummus-pita`), the file name, the crop shape (`4:3` for menu items) and where the food sits in the frame (`focus_x`, `focus_y`, 0 to 1; `0.5,0.5` is the center). Write the `alt` text as you'd describe the photo to someone on the phone.
+2. Add a row to `data/photos.csv`: a short `slug` (like `hummus-pita`), the file name, the crop shape (`4:3` for menu items), where the food sits in the frame (`focus_x`, `focus_y`, 0 to 1; `0.5,0.5` is the center) and `zoom` (1 keeps the whole frame, 2 moves in to half the width). Write the `alt` text as you'd describe the photo to someone on the phone.
 3. Run `python3 scripts/photos.py` (needs `pip install Pillow`). It writes `src/assets/photos/<slug>-800.webp` and `-1600.webp`, usually 30 to 150 KB each.
 4. Type the slug in the item's `photo` column in `data/menu-items.csv` and run `npm run build`.
 
@@ -62,7 +62,7 @@ Planned host: Cloudflare Pages. Build command `npm run build`, output folder `di
 
 ## What's next
 
-- Phase 1: the rest of the photos (four Drive folders still to pull), confirm hours and open questions, buy the domain, add an `og:image` link preview once the site has its address, launch.
+- Phase 1: drink and dessert photos plus a drinks menu, confirm hours and open questions, buy the domain, add an `og:image` link preview once the site has its address, launch.
 - Phase 2: online pickup ordering into Clover (menu will sync from Clover then; this CSV is what we import into Clover first).
 - Phase 3: rewards and win-back discount codes.
 

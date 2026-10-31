@@ -1,7 +1,27 @@
-slug,source_file,drive_folder,drive_id,ratio,focus_x,focus_y,alt,used_for
-dubai-strawberry-cup,1744402331348.jpg,Strawberry cup,1gxAGmO3UOysg3tfGGafcL67SQWyceSNa,4:3,0.5,0.5,"Dubai chocolate strawberry cup topped with pistachio cream, strawberries and kunafa",menu item dubai-strawberry-cup
-dubai-chocolate-bar,1727897850248.jpg,Dubai chocolate,19p0TPjyuuSerBZXfKu_6x0dW8NeXKS0q,4:3,0.5,0.5,"Dubai chocolate bars, one cut open to show the pistachio and kunafa filling",menu item dubai-chocolate-bar
-hero-chocolate-drizzle,1744402331136.jpg,Strawberry cup,1hEJFsI2zLWatqNWDUFMOqwuJL5FTcEEv,4:5,0.5,0.5,"Chocolate drizzled over a Dubai chocolate strawberry cup",homepage hero
-arch-dubai-bars,1727897851023.jpg,Dubai chocolate,1B-jhEosq8hcuKtoqTj4Fpa2qvvDqvL2a,3:5,0.5,0.55,"A stack of Dubai chocolate bars with pistachio filling",homepage dessert band
-arch-pistachio-pour,1744321172112.jpg,Strawberry cup,1g9pmnNLwx9ILDs_5hnFvVU-8SW_m8STl,1:2,0.5,0.5,"Pistachio cream poured over a strawberry cup",homepage dessert band
-iced-drinks,DSC_0578.jpg,Iced drinks,1mZAWL_HpUQ5lu85yyKgerRLGQ1-ewqk4,3:2,0.5,0.40,"Two iced drinks, one blue and one pink, with lemon, berries and strawberries",homepage coffee panel
+slug,source_file,drive_folder,drive_id,ratio,focus_x,focus_y,zoom,alt,used_for
+dubai-strawberry-cup,1744402331348.jpg,Strawberry cup,1gxAGmO3UOysg3tfGGafcL67SQWyceSNa,4:3,0.5,0.5,1,"Dubai chocolate strawberry cup topped with pistachio cream, strawberries and kunafa",menu item dubai-strawberry-cup
+dubai-chocolate-bar,1727897850248.jpg,Dubai chocolate,19p0TPjyuuSerBZXfKu_6x0dW8NeXKS0q,4:3,0.5,0.5,1,"Dubai chocolate bars, one cut open to show the pistachio and kunafa filling",menu item dubai-chocolate-bar
+arch-dubai-bars,1727897851023.jpg,Dubai chocolate,1B-jhEosq8hcuKtoqTj4Fpa2qvvDqvL2a,3:5,0.5,0.55,1,A stack of Dubai chocolate bars with pistachio filling,homepage dessert band
+arch-pistachio-pour,1744321172112.jpg,Strawberry cup,1g9pmnNLwx9ILDs_5hnFvVU-8SW_m8STl,1:2,0.5,0.5,1,Pistachio cream poured over a strawberry cup,homepage dessert band
+hero-samplers,c_DSC_0282(2).jpeg,Cello,1qWb5MtafA5BByssZnqOtXYCKB0UWeyWM,4:5,0.5,0.5,1,"Samplers No. 1 and No. 2 with falafel, hummus, baba ganoush, tabbouleh, grape leaves and warm pita",homepage hero
+shawarma-ammaniah,c_DSC_0153.jpeg,Cello,1FcKGj3B0OeskQDWVmj4nb2lUvwSwx7m6,4:3,0.5,0.55,1.05,"Shawarma Ammaniah sliced into bites on a Cello board with fries, pickles and dipping sauces",menu item shawarma-ammaniah
+cello-bagel,c_DSC_0519.jpeg,Cello,1JTkvYCZKYBoIQNp5HiF0qUGRulZUqMMS,4:3,0.52,0.55,1.1,"Cello Bagel: a za'atar bagel with falafel, hummus and tahini, next to a Cello coffee cup",menu item cello-bagel
+gyro-club-bagel,c_DSC_0644.jpeg,Cello,1KglxSkvIWlPpizEakzUnVSiWl8tLVvyP,4:3,0.5,0.55,1.15,"Gyro Club bagel with lamb gyro, scrambled egg and cheese, next to a cup of Turkish coffee",menu item gyro-club-bagel
+mediterranean-bagel,c_DSC_0580.jpeg,Cello,1Os-OxibSDgRAW1HO9PnTPTXAPK-kUPef,4:3,0.6,0.62,1.45,"Mediterranean bagel with avocado, mixed greens and vegetables",menu item mediterranean-bagel
+waffle,c_DSC_0089.jpeg,Cello,16WBmUkPTHhR1g6n9xxm8NLtiVNjGlc9v,4:3,0.58,0.62,1.15,"Waffle topped with blackberries, blueberries and raspberries",menu item waffle
+sampler-1,c_DSC_0311(2).jpeg,Cello,1c6wqSbsddp72I8_j3VhUNNmiS0dSk8iw,4:3,0.5,0.5,1.05,"Sampler No. 1: hummus, baba ganoush, falafel, tabbouleh, tzatziki and pita",menu item sampler-1
+sampler-2,c_DSC_0299(2).jpeg,Cello,1cb6gmaI9y5PKsQrs_xF3Sk5jtIxHonhj,4:3,0.52,0.5,1.05,"Sampler No. 2: hummus with chicken shawarma, grape leaves, spanakopita, falafel, tzatziki and pita",menu item sampler-2
+grape-leaves,c_DSC_0672.jpeg,Cello,1Ok8yWhF6_ilxV4gE3U1I5uSRXf8mAs6Y,4:3,0.52,0.57,1.25,Grape leaves arranged around a cup of yogurt sauce,menu item grape-leaves
+falafel-bites,c_DSC_0668.jpeg,Cello,1mtK-XWz2BznEvEExtt-EamUq5j3r-wqK,4:3,0.65,0.8,1.9,"Falafel with tahini, pickles and chopped tomato",menu item falafel-bites
+spanakopita,c_DSC_0668.jpeg,Cello,1mtK-XWz2BznEvEExtt-EamUq5j3r-wqK,4:3,0.28,0.24,2.3,Spanakopita triangles with a pepperoncini and dipping sauce,menu item spanakopita
+falafel-salad,c_DSC_0224.jpeg,Cello,1okCVACJXdkVSxALy8FjEeZwgxBv4d0AO,4:3,0.5,0.55,1.15,"Falafel salad with chickpeas, cucumber, tomato, tahini and a pepperoncini",menu item falafel-salad
+tabbouleh-salad,c_DSC_0215.jpeg,Cello,1X3MH14dM4e1uqe_Y1Kzp5yVbSeToeCfj,4:3,0.5,0.55,1.25,"Tabbouleh salad with parsley, tomato, bulgur and cucumber slices",menu item tabbouleh-salad
+fattoush-salad,c_DSC_0189.jpeg,Cello,1sktzei6ShHymUGcxQnVcr9iT9LLzGji2,4:3,0.45,0.6,1.35,Fattoush salad topped with toasted pita chips,menu item fattoush-salad
+lentil-soup,c_DSC_0578_1J8nJ.jpeg,Cello,1J8nJz7PkBncARZXVUja1oiOcQVpbD3B3,4:3,0.72,0.73,1.9,Lentil soup in a to-go cup,menu item lentil-soup
+house-salad,c_DSC_0578_1J8nJ.jpeg,Cello,1J8nJz7PkBncARZXVUja1oiOcQVpbD3B3,4:3,0.27,0.55,1.9,"House salad with lettuce, tomato, cucumber and a pepperoncini",menu item house-salad
+gyro-platter,c_DSC_0571.jpeg,Cello,16KPOLQDoz5WZQ82SLUAkmlMy5XWSVcPw,4:3,0.55,0.5,1.05,"Gyro platter with rice, peppers, onions, pepperoncini, tzatziki, garlic sauce and pita",menu item gyro-platter
+daypart-breakfast,c_DSC_0479.jpeg,Cello,1HwEzDpWmXkYLUbpwvopZ_BANdnHDosZN,16:10,0.5,0.5,1,Breakfast bagels and croissant sandwiches on a Cello board,homepage breakfast tile
+daypart-mezze,c_DSC_0262.jpeg,Cello,1ccd8jngjFGm-zhUvw01DdyeVZ5rrI-rN,16:10,0.5,0.6,1,"Falafel, fattoush and tabbouleh salads",homepage mezze tile
+daypart-platters,c_DSC_0569.jpeg,Cello,1xCqyhU_t9hDDmSKw8bDXLqCd8Bf3mfBw,16:10,0.55,0.5,1,Gyro platter with lentil soup and a house salad,homepage platters tile
+coffee-iced,c_DSC_0404.jpeg,Cello,1aBjQ19oRm6GIEJJl-qMm9ymY2Cwt_Q1B,3:2,0.5,0.62,1.2,"Five iced coffee drinks in a row, two topped with whipped cream and chocolate",homepage coffee panel
+catering-spread,c_DSC_0668.jpeg,Cello,1mtK-XWz2BznEvEExtt-EamUq5j3r-wqK,1:1,0.5,0.5,1,"Plates of spanakopita, grape leaves and falafel",homepage catering band

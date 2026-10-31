@@ -9,7 +9,8 @@ Reads full-size originals (straight from Google Drive) out of photos-originals/
 src/assets/photos/<slug>-800.webp and <slug>-1600.webp.
 
 Each row of data/photos.csv says which original to use, the shape to crop to
-(ratio, e.g. 4:3) and where the subject sits (focus_x, focus_y from 0 to 1), so a
+(ratio, e.g. 4:3), where the subject sits (focus_x, focus_y from 0 to 1) and how
+far to move in (zoom: 1 keeps the whole frame, 2 crops to half the width), so a
 crop can be nudged without opening an image editor. Needs Pillow:
 pip install Pillow
 """
@@ -24,7 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 WIDTHS = (800, 1600)
 
 
-def crop_to_ratio(im, ratio, fx, fy):
+def crop_to_ratio(im, ratio, fx, fy, zoom=1.0):
     rw, rh = (float(v) for v in ratio.split(':'))
     target = rw / rh
     w, h = im.size
@@ -32,6 +33,8 @@ def crop_to_ratio(im, ratio, fx, fy):
         cw, ch = round(h * target), h
     else:  # too tall: trim top and bottom
         cw, ch = w, round(w / target)
+    if zoom > 1:  # move in closer: a smaller window around the focus point
+        cw, ch = round(cw / zoom), round(ch / zoom)
     left = min(max(round(fx * w - cw / 2), 0), w - cw)
     top = min(max(round(fy * h - ch / 2), 0), h - ch)
     return im.crop((left, top, left + cw, top + ch))
@@ -58,8 +61,9 @@ def main():
             missing.append(f"{slug}: {row['source_file']} (Drive folder \"{row['drive_folder']}\")")
             continue
         im = ImageOps.exif_transpose(Image.open(original)).convert('RGB')
-        im = crop_to_ratio(im, row['ratio'], float(row['focus_x']), float(row['focus_y']))
+        im = crop_to_ratio(im, row['ratio'], float(row['focus_x']), float(row['focus_y']), float(row.get('zoom') or 1))
         for w, target in zip(WIDTHS, targets):
+            w = min(w, im.width)  # never enlarge; a tight crop's large file is just the crop
             size = (w, round(w * im.height / im.width))
             im.resize(size, Image.LANCZOS).save(target, 'WEBP', quality=78, method=6)
             print(f'{target.relative_to(ROOT)}  {size[0]}x{size[1]}  {target.stat().st_size // 1024} KB')

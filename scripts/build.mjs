@@ -149,12 +149,15 @@ function itemHTML(it, cat) {
   const options = itemGroups(it).map((g) => optionLine(it, g));
   const meta = [vegTag(it), it.portion ? `<span class="portion">${esc(it.portion)}</span>` : ''].filter(Boolean);
   const search = [it.name, it.description, cat.name, ...itemGroups(it).flatMap((g) => g.options.map((o) => o.name))].join(' ').toLowerCase();
-  return `<li class="menu-item" id="item-${esc(it.id)}" data-veg="${esc(it.vegetarian || 'unmarked')}" data-search="${esc(search)}">
-  ${it.photo ? photoImg(it.photo, '(max-width: 760px) calc(100vw - 32px), 560px', 'mi-photo') : ''}
-  <div class="mi-head"><h3>${esc(it.name)}</h3><span class="mi-leader" aria-hidden="true"></span>${priceHTML(it)}</div>
-  ${meta.length ? `<p class="mi-meta">${meta.join('')}</p>` : ''}
-  ${it.description ? `<p class="mi-desc">${esc(it.description)}</p>` : ''}
-  ${options.map((o) => `<p class="mi-options">${o}</p>`).join('\n  ')}
+  const body = [
+    `<div class="mi-head"><h3>${esc(it.name)}</h3><span class="mi-leader" aria-hidden="true"></span>${priceHTML(it)}</div>`,
+    meta.length ? `<p class="mi-meta">${meta.join('')}</p>` : '',
+    it.description ? `<p class="mi-desc">${esc(it.description)}</p>` : '',
+    ...options.map((o) => `<p class="mi-options">${o}</p>`)
+  ].filter(Boolean).join('\n    ');
+  // Items with a photo get a thumbnail beside the text, so photo and no-photo items keep the same rhythm.
+  return `<li class="menu-item${it.photo ? ' has-photo' : ''}" id="item-${esc(it.id)}" data-veg="${esc(it.vegetarian || 'unmarked')}" data-search="${esc(search)}">
+  ${it.photo ? `${photoImg(it.photo, '(max-width: 760px) 112px, 148px', 'mi-photo')}\n  <div class="mi-body">\n    ${body}\n  </div>` : body}
 </li>`;
 }
 

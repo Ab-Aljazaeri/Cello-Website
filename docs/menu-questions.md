@@ -29,7 +29,14 @@ These aren't on the 2024 printed menus, so the names and descriptions were writt
 
 13. **Dubai Chocolate Strawberry Cup** (Strawberry cup folder, April 2025). Is that what you call it? Price? Is the description right: strawberries, chocolate and pistachio cream, toasted kunafa, crushed pistachios?
 14. **Dubai Chocolate Bar** (Dubai chocolate folder, October 2024). Still sold? Price, and is it one size?
-15. **Iced drinks** (one photo: a blue drink and a pink drink with lemon and berries). What are they called and what do they cost? The photo is on the homepage now without names.
+15. **Drinks in the photos.** Names and prices for each, and they become a Drinks section on the menu:
+    - five iced coffees (DSC_0396 to 0415), from left: a latte, a dark one, two topped with whipped cream and chocolate, and a red-orange one
+    - lemonades in blue, yellow-green and pink (DSC_0405 to 0610)
+    - iced teas shot with mango, peach and strawberry (DSC_0616 to 0652)
+    - a hot drink in a Cello cup topped with pistachio cream and kunafa (DSC_0512, 0519, 0520)
+16. **Waffles.** The printed menu has one "Waffle, served with maple syrup" ($9.95). The photos show four: berries, Oreo with chocolate, strawberries with pistachio and chocolate drizzle, and a savory one with gyro, avocado and a fried egg. Which are on the menu now, and at what price? For now the site shows the berry waffle photo on "Waffle".
+17. **Croissant sandwiches** (DSC_0604 to 0635): an egg-and-cheese croissant and one with a dark filling. Names, fillings and prices?
+18. **Baklava, namoura, mamoul and brownies** have no photos yet. The "Baklava" arch on the homepage is still empty. A photo of the case or a tray would fill it.
 
 ## Brand
 
