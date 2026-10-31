@@ -4,8 +4,8 @@ cello-bagel,breakfast,Cello Bagel,Falafel and hummus with tahini sauce.,7.50,,,y
 egg-cheese-bagel,breakfast,Egg & Cheese,Scrambled egg and American cheese.,6.00,,,yes,,,,active,3,breakfast-2024,Vegetarian inferred: breakfast menu has no leaf marks
 veggie-shawarma-egg-bagel,breakfast,Veggie Shawarma & Egg,"Marinated mixed veggies (mushrooms, squash, onion, zucchini), scrambled egg and American cheese.",8.00,,,yes,,,,active,4,breakfast-2024,Vegetarian inferred: breakfast menu has no leaf marks
 gyro-club-bagel,breakfast,Gyro Club,"Lamb gyro bacon, scrambled eggs and American cheese.",8.00,,,,,,,active,5,breakfast-2024,"Question: what is 'gyro bacon' (beef, turkey or lamb)? Worth naming since the kitchen is halal"
-mediterranean-bagel,breakfast,Mediterranean,"Avocado, tomato, cucumber, mixed greens and roasted eggplant spread.",7.50,,,yes,,,,active,6,breakfast-2024,"Fixed typo: Avacado. Vegetarian inferred"
-sunshine-burrito,breakfast,Sunshine Burrito,"Avocado, eggs and feta cheese.",9.45,,,yes,,,,active,7,breakfast-2024,"Fixed typo: Avacado. Vegetarian inferred"
+mediterranean-bagel,breakfast,Mediterranean,"Avocado, tomato, cucumber, mixed greens and roasted eggplant spread.",7.50,,,yes,,,,active,6,breakfast-2024,Fixed typo: Avacado. Vegetarian inferred
+sunshine-burrito,breakfast,Sunshine Burrito,"Avocado, eggs and feta cheese.",9.45,,,yes,,,,active,7,breakfast-2024,Fixed typo: Avacado. Vegetarian inferred
 rooster-burrito,breakfast,Rooster Burrito,"Falafel, tahini, eggs and fresh greens.",9.45,,,yes,,,,active,8,breakfast-2024,Vegetarian inferred
 waffle,breakfast,Waffle,Served with maple syrup.,9.95,,,yes,,,,active,9,breakfast-2024,Vegetarian inferred
 hummus-pita,appetizers,Hummus & Pita,"Our homemade hummus with tahini and lemon juice, drizzled with olive oil and served with warm pita.",7.50,,,yes,yes,yes,,active,1,front-2024,Flavor upgrades are in modifiers.csv
@@ -43,10 +43,12 @@ side-pita,sides,Pita Bread,,1.95,,,,,,,active,4,back-2024,
 side-tzatziki,sides,Tzatziki Sauce,,0.99,,,,,,,active,5,back-2024,
 side-tahini,sides,Tahini Sauce,,0.99,,,,,,,active,6,back-2024,
 side-garlic-sauce,sides,Garlic Sauce,,0.99,,,,,,,active,7,back-2024,
-side-fries,sides,Fries,,6.00,,,,,,,active,8,back-2024,"Printed as 'Frise'; confirm it means fries. Also $3.99 as a sandwich side"
+side-fries,sides,Fries,,6.00,,,,,,,active,8,back-2024,Printed as 'Frise'; confirm it means fries. Also $3.99 as a sandwich side
 kids-chicken-nuggets,kids,Chicken Nuggets,,6.00,,,,,,,active,1,back-2024,
 kids-grilled-cheese,kids,Grilled Cheese,,6.00,,,,,,,active,2,back-2024,
-baklava,desserts,Baklava,Nineteen house varieties. Ask what's in the case today.,,See the case,19 varieties,,,yes,,active,1,back-2024,No price on printed menu
+baklava,desserts,Baklava,Nineteen house varieties. Ask what's in the case today.,,See the case,19 varieties,,,,,active,1,back-2024,No price on printed menu
 namoura,desserts,Namoura,,,See the case,,,,,,active,2,back-2024,No price or description on printed menu
 mamoul,desserts,Mamoul,,,See the case,,,,,,active,3,back-2024,No price or description on printed menu
 brownies,desserts,Brownies,,,See the case,,,,,,active,4,back-2024,No price on printed menu
+dubai-strawberry-cup,desserts,Dubai Chocolate Strawberry Cup,"Fresh strawberries layered with chocolate and pistachio cream, topped with toasted kunafa and crushed pistachios.",,Ask at the counter,,,,1,dubai-strawberry-cup,active,5,drive-photos-2025,"Not on the 2024 printed menu. Name, price and description written from the photos; confirm with family"
+dubai-chocolate-bar,desserts,Dubai Chocolate Bar,A thick chocolate bar filled with pistachio cream and crunchy toasted kunafa.,,Ask at the counter,,,,,dubai-chocolate-bar,active,6,drive-photos-2024,Not on the 2024 printed menu. Price and description written from the photos; confirm with family

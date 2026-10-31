@@ -6,7 +6,7 @@
 // data/menu-items.csv, data/categories.csv and data/modifiers.csv are the source of truth.
 // Edit them in Excel or Google Sheets (save as CSV), run the build, and the menu page,
 // the homepage favorites and dist/data/menu.json all update together.
-import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -46,9 +46,16 @@ const readCSV = (name) => parseCSV(readFileSync(join(ROOT, 'data', name), 'utf8'
 const categories = readCSV('categories.csv').sort((a, b) => Number(a.sort) - Number(b.sort));
 const items = readCSV('menu-items.csv');
 const modifierRows = readCSV('modifiers.csv');
+const photos = new Map(readCSV('photos.csv').map((p) => [p.slug, p]));
 
 // ---------- validation ----------
 const problems = [];
+const PHOTO_DIR = join(ROOT, 'src', 'assets', 'photos');
+for (const p of photos.values()) {
+  for (const w of [800, 1600]) {
+    if (!existsSync(join(PHOTO_DIR, `${p.slug}-${w}.webp`))) problems.push(`photo ${p.slug}: ${p.slug}-${w}.webp is missing (run python3 scripts/photos.py)`);
+  }
+}
 const catIds = new Set(categories.map((c) => c.id));
 const seen = new Set();
 for (const it of items) {
@@ -58,6 +65,9 @@ for (const it of items) {
   if (it.price && Number.isNaN(Number(it.price))) problems.push(`${it.id}: price "${it.price}" is not a number`);
   if (!['', 'yes', 'option', 'no'].includes(it.vegetarian)) problems.push(`${it.id}: vegetarian must be yes, option, no or blank`);
   if (!['active', 'draft', 'hidden'].includes(it.status)) problems.push(`${it.id}: status must be active, draft or hidden`);
+  if (it.featured && it.featured !== 'yes' && !/^\d+$/.test(it.featured)) problems.push(`${it.id}: featured must be yes, a number or blank`);
+  if (it.photo && !photos.has(it.photo)) problems.push(`${it.id}: photo "${it.photo}" is not a slug in data/photos.csv`);
+  else if (it.photo && photos.get(it.photo).ratio !== '4:3') problems.push(`${it.id}: menu photos are cropped 4:3 (photo "${it.photo}" is ${photos.get(it.photo).ratio})`);
 }
 for (const m of modifierRows) {
   for (const target of m.applies_to.split(/\s+/)) {
@@ -76,6 +86,13 @@ const money = (n) => { const v = Number(n); return Number.isInteger(v) ? `$${v}`
 const joinOr = (list) => (list.length < 2 ? list.join('') : `${list.slice(0, -1).join(', ')} or ${list[list.length - 1]}`);
 const leaf = '<svg aria-hidden="true"><use href="#i-leaf"/></svg>';
 const arrow = '<svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg>';
+
+// Menu photos are 4:3 WebP files in two widths; the browser picks one using `sizes`.
+const photoImg = (slug, sizes, cls = '') => {
+  const p = photos.get(slug);
+  const src = (w) => `assets/photos/${esc(slug)}-${w}.webp`;
+  return `<img${cls ? ` class="${cls}"` : ''} src="${src(800)}" srcset="${src(800)} 800w, ${src(1600)} 1600w" sizes="${sizes}" alt="${esc(p.alt)}" width="800" height="600" loading="lazy" decoding="async">`;
+};
 
 // modifier groups
 const groups = new Map();
@@ -133,7 +150,7 @@ function itemHTML(it, cat) {
   const meta = [vegTag(it), it.portion ? `<span class="portion">${esc(it.portion)}</span>` : ''].filter(Boolean);
   const search = [it.name, it.description, cat.name, ...itemGroups(it).flatMap((g) => g.options.map((o) => o.name))].join(' ').toLowerCase();
   return `<li class="menu-item" id="item-${esc(it.id)}" data-veg="${esc(it.vegetarian || 'unmarked')}" data-search="${esc(search)}">
-  ${it.photo ? `<img class="mi-photo" src="assets/menu/${esc(it.photo)}" alt="${esc(it.name)}" width="800" height="500" loading="lazy">` : ''}
+  ${it.photo ? photoImg(it.photo, '(max-width: 760px) calc(100vw - 32px), 560px', 'mi-photo') : ''}
   <div class="mi-head"><h3>${esc(it.name)}</h3><span class="mi-leader" aria-hidden="true"></span>${priceHTML(it)}</div>
   ${meta.length ? `<p class="mi-meta">${meta.join('')}</p>` : ''}
   ${it.description ? `<p class="mi-desc">${esc(it.description)}</p>` : ''}
@@ -158,10 +175,15 @@ const chipsHTML = byCategory.map((c) => {
 }).join('\n');
 
 // ---------- homepage favorites ----------
-const featured = byCategory.flatMap((c) => c.items.filter((it) => it.featured === 'yes'));
+// featured: a number sets the card's position (1 = first); "yes" cards follow in menu order.
+const featuredRank = (it) => (/^\d+$/.test(it.featured) ? Number(it.featured) : 1000);
+const featured = byCategory.flatMap((c) => c.items.filter((it) => it.featured))
+  .map((it, n) => ({ it, n }))
+  .sort((a, b) => featuredRank(a.it) - featuredRank(b.it) || a.n - b.n)
+  .map(({ it }) => it);
 const featuredHTML = featured.map((it) => `<article class="dish-card">
   <div class="dish-photo">${it.photo
-    ? `<img src="assets/menu/${esc(it.photo)}" alt="${esc(it.name)}" width="800" height="600" loading="lazy">`
+    ? photoImg(it.photo, '(max-width: 620px) 80vw, (max-width: 1000px) 46vw, 380px')
     : `<span class="ph-tag">Photo coming</span><span class="ph-name">${esc(it.name)}</span>`}</div>
   <div class="dish-body">
     <div class="dish-top"><h3>${esc(it.name)}</h3>${priceHTML(it)}</div>
@@ -209,7 +231,7 @@ const json = {
       id: it.id, name: it.name, description: it.description,
       price: it.price ? Number(it.price) : null, price_label: it.price_label || null,
       portion: it.portion || null, vegetarian: it.vegetarian || null,
-      photo: it.photo || null, modifier_groups: itemGroups(it).map((g) => g.id)
+      photo: it.photo ? `assets/photos/${it.photo}-800.webp` : null, modifier_groups: itemGroups(it).map((g) => g.id)
     }))
   })),
   modifier_groups: [...groups.values()]

@@ -23,6 +23,14 @@ Answers go straight into `data/menu-items.csv` or the site.
 
 Beoruiti → Beiruti, Vegie → Veggie, Sawarma → Shawarma, Avacado → Avocado, burger cracker wheat → bulgur cracked wheat, Kalimata → Kalamata, diffrent → different, celo sauce → Cello sauce. Kept as printed: Lebneh, Zaatar, Namoura, Mamoul.
 
+## New items from the Drive photos
+
+These aren't on the 2024 printed menus, so the names and descriptions were written from the photos. The site shows "Ask at the counter" instead of a price for now.
+
+13. **Dubai Chocolate Strawberry Cup** (Strawberry cup folder, April 2025). Is that what you call it? Price? Is the description right: strawberries, chocolate and pistachio cream, toasted kunafa, crushed pistachios?
+14. **Dubai Chocolate Bar** (Dubai chocolate folder, October 2024). Still sold? Price, and is it one size?
+15. **Iced drinks** (one photo: a blue drink and a pink drink with lemon and berries). What are they called and what do they cost? The photo is on the homepage now without names.
+
 ## Brand
 
 12. Does anyone have the original logo file from the designer (.ai, .eps, .svg or .pdf)? The site uses a cleaned-up version of the white PNG, which is fine, but a vector file stays sharp at any size and on signage.

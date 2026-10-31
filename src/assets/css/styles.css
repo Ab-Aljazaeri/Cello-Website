@@ -168,11 +168,15 @@ a:hover { color: var(--ink); }
 }
 .arch img { width: 100%; height: 100%; object-fit: cover; }
 .arch::after { content: ""; position: absolute; inset: 12px; border: 1.5px solid rgba(255, 248, 231, 0.6); border-radius: var(--arch); pointer-events: none; }
-.photo-note {
-  position: absolute; left: 50%; top: 24px; transform: translateX(-50%); padding: 7px 14px; border-radius: 999px;
-  background: rgba(46, 27, 16, 0.78); color: var(--on-dark); font-size: 0.8125rem; font-weight: 600; white-space: nowrap;
+/* "New" chip on the hero photo; sits bottom-right, clear of the badge */
+.photo-chip { position: absolute; right: 24px; bottom: 26px; z-index: 1; max-width: calc(100% - 128px); }
+.photo-chip a {
+  display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px 8px 8px; border-radius: 999px;
+  background: rgba(46, 27, 16, 0.84); color: var(--on-dark); font-size: 0.875rem; font-weight: 700; line-height: 1.2;
+  text-decoration: none; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: background-color 0.2s ease;
 }
-.arch .arch-cup { position: absolute; left: 20%; top: 17%; width: 60%; height: auto; object-fit: contain; opacity: 0.95; }
+.photo-chip a:hover { background: var(--ink); color: var(--gold); }
+.photo-chip .new { flex: none; padding: 4px 9px; border-radius: 999px; background: var(--gold); color: var(--ink); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
 .badge {
   position: absolute; left: 0; bottom: 0; width: clamp(112px, 13vw, 148px); aspect-ratio: 1; border-radius: 50%;
   background: var(--ink); color: var(--gold); display: grid; place-items: center; box-shadow: var(--shadow);
@@ -217,6 +221,7 @@ a:hover { color: var(--ink); }
 .dish-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
 .dish-top h3 { font-size: 1.45rem; font-weight: 700; }
 .price { font-family: var(--font-body); font-weight: 700; font-variant-numeric: tabular-nums; color: var(--copper-ink); white-space: nowrap; }
+.dish-top .price.muted { color: var(--ink-2); font-weight: 600; font-size: 0.9rem; font-style: italic; white-space: normal; text-align: right; max-width: 9em; line-height: 1.25; }
 .dish-body p { color: var(--ink-2); font-size: 1rem; line-height: 1.5; }
 .dish-body .text-link { margin-top: auto; }
 
@@ -251,7 +256,11 @@ a:hover { color: var(--ink); }
 .arch-row .arch { aspect-ratio: 3 / 5; background: var(--pattern), linear-gradient(170deg, #5A3520, #3A2214); box-shadow: none; }
 .arch-row .arch:nth-child(2) { aspect-ratio: 3 / 6; }
 .arch-row .arch::after { border-color: rgba(240, 168, 48, 0.45); }
-.arch-row figcaption { position: absolute; inset: auto 0 22px; text-align: center; font-family: var(--font-display); font-style: italic; font-size: 1.2rem; font-weight: 600; color: var(--on-dark); }
+.arch-row figcaption {
+  position: absolute; inset: auto 0 0; padding: 48px 8px 24px; text-align: center; line-height: 1.15;
+  background: linear-gradient(180deg, transparent, rgba(30, 16, 8, 0.82) 70%);
+  font-family: var(--font-display); font-style: italic; font-size: clamp(1rem, 0.85rem + 0.5vw, 1.2rem); font-weight: 600; color: var(--on-dark);
+}
 
 /* coffee + order split */
 .split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
@@ -259,7 +268,9 @@ a:hover { color: var(--ink); }
 .panel { display: grid; gap: 16px; align-content: start; padding: clamp(26px, 4vw, 44px); border-radius: 24px; min-width: 0; }
 .panel h2 { font-size: var(--step-3); font-weight: 800; }
 .panel p { color: var(--ink-2); max-width: 46ch; }
-.panel-coffee { background: var(--pattern), var(--paper-2); }
+.panel-coffee { --pad: clamp(26px, 4vw, 44px); background: var(--pattern), var(--paper-2); overflow: hidden; }
+.panel-photo { margin: calc(-1 * var(--pad)) calc(-1 * var(--pad)) 10px; }
+.panel-photo img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .panel-order { background: var(--card); border: 1px solid var(--line); }
 .steps { display: grid; gap: 14px; margin: 4px 0 0; padding: 0; list-style: none; counter-reset: step; }
 .steps li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 14px; align-items: start; counter-increment: step; }
