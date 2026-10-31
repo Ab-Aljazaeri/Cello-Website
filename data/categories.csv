@@ -1,0 +1,10 @@
+id,name,kicker,intro,sort
+breakfast,Breakfast,Mornings,"Bagels come plain, everything or za'atar.",1
+appetizers,Appetizers,Mezze,Homemade hummus and dips to share.,2
+samplers,Samplers,To share,A little of everything.,3
+soup-salad,Soup & Salad,Fresh,,4
+sandwiches,Sandwiches,Wraps & burritos,"Add a side: house salad or lentil soup $3.50, fries $3.99.",5
+entrees,Entrées,Platters,Served with your choice of lentil soup or house salad.,6
+sides,Sides,Extras,,7
+kids,Kids' Menu,Little ones,Comes with rice or house salad.,8
+desserts,Desserts,The case,"Nineteen kinds of baklava, plus namoura, mamoul, brownies and more. Ask what's in the case today.",9

@@ -1,0 +1,26 @@
+group_id,group_name,applies_to,required,min,max,option_id,option_name,price_delta,sort,notes
+bagel-type,Bagel,classic-bagel cello-bagel egg-cheese-bagel veggie-shawarma-egg-bagel gyro-club-bagel mediterranean-bagel,yes,1,1,plain,Plain,0.00,1,
+bagel-type,Bagel,classic-bagel cello-bagel egg-cheese-bagel veggie-shawarma-egg-bagel gyro-club-bagel mediterranean-bagel,yes,1,1,everything,Everything,0.00,2,
+bagel-type,Bagel,classic-bagel cello-bagel egg-cheese-bagel veggie-shawarma-egg-bagel gyro-club-bagel mediterranean-bagel,yes,1,1,zaatar,Zaatar,0.00,3,
+hummus-flavor,Hummus flavor,hummus-pita,no,0,1,roasted-red-pepper,Roasted Red Pepper,1.00,1,
+hummus-flavor,Hummus flavor,hummus-pita,no,0,1,kalamata,Kalamata,1.00,2,Printed as 'Kalimata'
+hummus-flavor,Hummus flavor,hummus-pita,no,0,1,herbal,Herbal,1.00,3,
+hummus-flavor,Hummus flavor,hummus-pita,no,0,1,feta,Feta Cheese,1.00,4,
+falafel-add,Add to your falafel,falafel-sandwich,no,0,2,eggplant,Eggplant,1.50,1,
+falafel-add,Add to your falafel,falafel-sandwich,no,0,2,cauliflower,Cauliflower,1.50,2,
+burrito-filling,Filling,burrito,yes,1,1,falafel,Falafel,0.00,1,Base price 9.45
+burrito-filling,Filling,burrito,yes,1,1,veggie,Veggie,0.00,2,
+burrito-filling,Filling,burrito,yes,1,1,chicken,Chicken,0.55,3,Printed price $10.00
+burrito-filling,Filling,burrito,yes,1,1,gyro,Gyro,1.00,4,Printed price $10.45
+sandwich-side,Add a side,category:sandwiches,no,0,1,house-salad,House Salad,3.50,1,
+sandwich-side,Add a side,category:sandwiches,no,0,1,lentil-soup,Lentil Soup,3.50,2,
+sandwich-side,Add a side,category:sandwiches,no,0,1,fries,Fries,3.99,3,Printed as 'Frise'
+entree-starter,Comes with,category:entrees,yes,1,1,lentil-soup,Lentil Soup,0.00,1,
+entree-starter,Comes with,category:entrees,yes,1,1,house-salad,House Salad,0.00,2,
+kids-side,Comes with,category:kids,yes,1,1,rice,Rice,0.00,1,
+kids-side,Comes with,category:kids,yes,1,1,house-salad,House Salad,0.00,2,
+sampler-hummus,Hummus blends (choose 2),sampler-3,yes,2,2,classic,Classic,0.00,1,Confirm which blends count and whether flavored ones cost extra here
+sampler-hummus,Hummus blends (choose 2),sampler-3,yes,2,2,roasted-red-pepper,Roasted Red Pepper,0.00,2,
+sampler-hummus,Hummus blends (choose 2),sampler-3,yes,2,2,kalamata,Kalamata,0.00,3,
+sampler-hummus,Hummus blends (choose 2),sampler-3,yes,2,2,herbal,Herbal,0.00,4,
+sampler-hummus,Hummus blends (choose 2),sampler-3,yes,2,2,feta,Feta Cheese,0.00,5,

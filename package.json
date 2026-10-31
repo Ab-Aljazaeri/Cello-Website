@@ -1,0 +1,13 @@
+{
+  "name": "cello-website",
+  "private": true,
+  "type": "module",
+  "description": "Website for Cello Coffee House & Cafe, downtown Roanoke",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/build.mjs --preview"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
