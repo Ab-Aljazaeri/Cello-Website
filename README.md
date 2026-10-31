@@ -58,7 +58,9 @@ npm run preview      # builds dist-preview/ for the claude.ai preview link
 
 ## Deploying
 
-Planned host: Cloudflare Pages. Build command `npm run build`, output folder `dist`.
+**Prototype (now):** GitHub Pages at https://ab-aljazaeri.github.io/Cello-Website/. Every push to `main` runs `.github/workflows/pages.yml`, which builds with `npm run build:prototype` and publishes `dist/`. The prototype build adds a "Preview of the new Cello website" bar and a `noindex` tag so search engines skip it. One-time setup: the repo has to be public, and Settings > Pages > Source is set to "GitHub Actions". The Actions tab shows each deploy.
+
+**Launch:** Cloudflare Pages with the real domain. Build command `npm run build` (no preview bar, no `noindex`), output folder `dist`.
 
 ## What's next
 

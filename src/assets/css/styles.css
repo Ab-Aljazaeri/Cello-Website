@@ -65,6 +65,8 @@ a { color: var(--copper-ink); text-underline-offset: 3px; }
 a:hover { color: var(--ink); }
 :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* shown only on the prototype build (npm run build:prototype) */
+.proto-bar { margin: 0; padding: 8px var(--gutter-r) 8px var(--gutter-l); background: var(--ink); color: var(--on-dark); font-size: 0.875rem; font-weight: 600; text-align: center; }
 .skip-link { position: absolute; left: 12px; top: -60px; z-index: 100; padding: 10px 16px; border-radius: 10px; background: var(--ink); color: var(--on-dark); font-weight: 700; }
 .skip-link:focus { top: 12px; }
 

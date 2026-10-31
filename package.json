@@ -5,6 +5,7 @@
   "description": "Website for Cello Coffee House & Cafe, downtown Roanoke",
   "scripts": {
     "build": "node scripts/build.mjs",
+    "build:prototype": "node scripts/build.mjs --prototype",
     "preview": "node scripts/build.mjs --preview"
   },
   "engines": {

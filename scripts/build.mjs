@@ -12,6 +12,9 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PREVIEW = process.argv.includes('--preview');
+// --prototype: the shareable preview on GitHub Pages. Adds a "not live yet" bar and
+// keeps search engines out, so unconfirmed hours and prices don't end up on Google.
+const PROTOTYPE = process.argv.includes('--prototype');
 const OUT = join(ROOT, PREVIEW ? 'dist-preview' : 'dist');
 
 // ---------- CSV ----------
@@ -221,6 +224,10 @@ cpSync(join(ROOT, 'src', 'assets'), join(OUT, 'assets'), { recursive: true });
 let index = inject(readFileSync(join(ROOT, 'src', 'index.html'), 'utf8'), 'FEATURED', featuredHTML);
 let menu = readFileSync(join(ROOT, 'src', 'menu.html'), 'utf8');
 menu = inject(inject(menu, 'MENU', menuHTML), 'CHIPS', chipsHTML);
+const markPrototype = (html) => html
+  .replace('<head>', '<head>\n<meta name="robots" content="noindex, nofollow">')
+  .replace('<body>', '<body>\n<p class="proto-bar">Preview of the new Cello website. Menu, prices and hours are still being confirmed.</p>');
+if (PROTOTYPE) { index = markPrototype(index); menu = markPrototype(menu); }
 if (PREVIEW) index = forPreviewMain(index);
 
 writeFileSync(join(OUT, 'index.html'), index);
