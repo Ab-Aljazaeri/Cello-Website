@@ -4,7 +4,7 @@ Answers go straight into `data/menu-items.csv` or the site.
 
 ## Must answer before launch
 
-1. **Hours.** Three versions are online. The site uses the old Wix site's hours (Mon–Tue 8–7, Wed 9–6, Thu 8:30–8, Fri 8:30–8:30, Sat 9:30–9, Sun 10–5). The Downtown Roanoke listing says Mon–Sat 11–8, Sun 10–5. Which is right? Google, Yelp and Downtown Roanoke all need the same answer.
+1. ~~**Hours.**~~ Settled from the sign on the door (Nov 2026): Mon–Tue 8:30 AM–7:30 PM, Wed 9 AM–7 PM, Thu 8:30 AM–8 PM, Fri 8:30 AM–8:30 PM, Sat 9:30 AM–9 PM, Sun 10 AM–5 PM. The site uses these. Google, Yelp and the Downtown Roanoke listing still need updating to match.
 2. **Drinks.** The printed menus have no coffee, espresso, tea, smoothie, ice cream or gelato prices. We need that list with prices.
 3. **Desserts.** No prices on the printed menu. Prices per piece or box for baklava, namoura, mamoul and brownies, and which of the 19 baklavas to name.
 4. **Catering.** The homepage has a catering section (trays for offices and parties). Keep it only if you want to offer that.
