@@ -308,13 +308,13 @@ a:hover { color: var(--ink); }
 .hours tr[data-today] th::after { content: " · today"; font-weight: 600; font-size: 0.85rem; }
 .note { color: var(--ink-2); font-size: 0.95rem; }
 .map-card {
-  position: relative; min-height: 340px; border-radius: 24px; overflow: hidden; display: grid; place-items: center; text-align: center; padding: 28px;
-  background: var(--pattern), var(--paper-2); border: 1px solid var(--line);
+  display: grid; grid-template-rows: minmax(320px, 1fr) auto; min-height: 440px; border-radius: 24px; overflow: hidden;
+  background: var(--paper-2); border: 1px solid var(--line); box-shadow: var(--shadow);
 }
-.map-card .pin { width: 64px; height: 64px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--copper-ink); display: grid; place-items: center; box-shadow: var(--shadow); }
-.map-card .pin span { transform: rotate(45deg); width: 22px; height: 22px; border-radius: 50%; background: var(--paper); }
-.map-card .inner { display: grid; gap: 16px; justify-items: center; }
-.map-card strong { font-family: var(--font-display); font-size: var(--step-2); font-weight: 800; }
+.map-frame { display: block; width: 100%; height: 100%; min-height: 320px; border: 0; }
+.map-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 20px; padding: 18px 22px; background: var(--paper); border-top: 1px solid var(--line); }
+.map-bar strong { display: block; font-family: var(--font-display); font-size: var(--step-1); font-weight: 800; }
+.map-bar .note { margin: 2px 0 0; }
 
 /* footer with the brick edge from the printed menus */
 .site-footer { position: relative; background: var(--ink); color: var(--on-dark-2); padding-block: 72px 36px; }
